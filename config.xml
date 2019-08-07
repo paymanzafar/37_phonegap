@@ -6,14 +6,14 @@
         versionCode = "37100"
         android-versionCode="37100"
         version   = "3.7.1">
-    <name>Moodle</name>
+    <name>مگ‌آموز</name>
 
     <description>
-        Moodle official app
+        MAGFA E-Learning App
     </description>
 
-    <author href="http://moodle.com" email="mobile@moodle.com">
-        Moodle Mobile team
+    <author email="admin@magamooz.com" href="http://magfa.com">
+        MAGFA E-Learning team
     </author>
 
     <edit-config target="CFBundleShortVersionString" file="*-Info.plist" mode="merge">
@@ -48,7 +48,7 @@
     <preference name="webviewbounce"    value="false" />
     <preference name="prerendered-icon" value="true" />
     <preference name="load-url-timeout" value="60000" />
-    <preference name="AppendUserAgent" value="MoodleMobile" />
+    <preference name="AppendUserAgent" value="MagAmooz" />
     <preference name="android-minSdkVersion" value="19" />
     <preference name="android-targetSdkVersion" value="28" />
     <preference name="android-installLocation" value="auto" />
