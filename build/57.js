@@ -1,24 +1,89 @@
 webpackJsonp([57],{
 
-/***/ 2032:
+/***/ 2062:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreCommentsViewerPageModule", function() { return CoreCommentsViewerPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__viewer__ = __webpack_require__(2211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pipes_pipes_module__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_components_module__ = __webpack_require__(283);
+// (C) Copyright 2015 Martin Dougiamas
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 
-// EXTERNAL MODULE: ./node_modules/@angular/core/esm5/core.js
-var core = __webpack_require__(0);
 
-// EXTERNAL MODULE: ./node_modules/ionic-angular/index.js + 3 modules
-var ionic_angular = __webpack_require__(6);
 
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(3);
 
-// EXTERNAL MODULE: ./src/providers/sites.ts
-var sites = __webpack_require__(1);
 
-// CONCATENATED MODULE: ./src/core/grades/pages/coursesplit/coursesplit.ts
+
+
+
+var CoreCommentsViewerPageModule = /** @class */ (function () {
+    function CoreCommentsViewerPageModule() {
+    }
+    CoreCommentsViewerPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_3__viewer__["a" /* CoreCommentsViewerPage */]
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__["a" /* CoreDirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_6__pipes_pipes_module__["a" /* CorePipesModule */],
+                __WEBPACK_IMPORTED_MODULE_7__components_components_module__["a" /* CoreCommentsComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__viewer__["a" /* CoreCommentsViewerPage */]),
+                __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
+            ],
+        })
+    ], CoreCommentsViewerPageModule);
+    return CoreCommentsViewerPageModule;
+}());
+
+//# sourceMappingURL=viewer.module.js.map
+
+/***/ }),
+
+/***/ 2211:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreCommentsViewerPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_animations__ = __webpack_require__(422);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_sites__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_utils_text__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_utils_time__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_events__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__core_user_providers_user__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_comments__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_offline__ = __webpack_require__(285);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_sync__ = __webpack_require__(454);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -44,314 +109,320 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
+
+
+
+
+
+
+
 /**
- * Page that displays a course grades.
+ * Page that displays comments.
  */
-var coursesplit_CoreGradesCourseSplitPage = /** @class */ (function () {
-    function CoreGradesCourseSplitPage(navParams, sitesProvider) {
-        this.courseId = navParams.get('courseId');
-        this.userId = navParams.get('userId') || sitesProvider.getCurrentSiteUserId();
-        this.gradeId = navParams.get('gradeId');
+var CoreCommentsViewerPage = /** @class */ (function () {
+    function CoreCommentsViewerPage(navParams, sitesProvider, userProvider, domUtils, translate, modalCtrl, commentsProvider, offlineComments, eventsProvider, commentsSync, textUtils, timeUtils) {
+        var _this = this;
+        this.sitesProvider = sitesProvider;
+        this.userProvider = userProvider;
+        this.domUtils = domUtils;
+        this.translate = translate;
+        this.modalCtrl = modalCtrl;
+        this.commentsProvider = commentsProvider;
+        this.offlineComments = offlineComments;
+        this.commentsSync = commentsSync;
+        this.textUtils = textUtils;
+        this.timeUtils = timeUtils;
+        this.comments = [];
+        this.commentsLoaded = false;
+        this.canLoadMore = false;
+        this.loadMoreError = false;
+        this.canAddComments = false;
+        this.canDeleteComments = false;
+        this.showDelete = false;
+        this.hasOffline = false;
+        this.refreshIcon = 'spinner';
+        this.syncIcon = 'spinner';
+        this.addDeleteCommentsAvailable = false;
+        this.contextLevel = navParams.get('contextLevel');
+        this.instanceId = navParams.get('instanceId');
+        this.componentName = navParams.get('componentName');
+        this.itemId = navParams.get('itemId');
+        this.area = navParams.get('area') || '';
+        this.title = navParams.get('title') || this.translate.instant('core.comments.comments');
+        this.page = 0;
+        // Refresh data if comments are synchronized automatically.
+        this.syncObserver = eventsProvider.on(__WEBPACK_IMPORTED_MODULE_12__providers_sync__["a" /* CoreCommentsSyncProvider */].AUTO_SYNCED, function (data) {
+            if (data.contextLevel == _this.contextLevel && data.instanceId == _this.instanceId &&
+                data.componentName == _this.componentName && data.itemId == _this.itemId && data.area == _this.area) {
+                // Show the sync warnings.
+                _this.showSyncWarnings(data.warnings);
+                // Refresh the data.
+                _this.commentsLoaded = false;
+                _this.refreshIcon = 'spinner';
+                _this.syncIcon = 'spinner';
+                _this.domUtils.scrollToTop(_this.content);
+                _this.page = 0;
+                _this.comments = [];
+                _this.fetchComments(false);
+            }
+        }, sitesProvider.getCurrentSiteId());
     }
-    CoreGradesCourseSplitPage = __decorate([
-        Object(core["m" /* Component */])({
-            selector: 'page-core-grades-course-split',
-            templateUrl: 'coursesplit.html',
+    /**
+     * View loaded.
+     */
+    CoreCommentsViewerPage.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        this.commentsProvider.isAddCommentsAvailable().then(function (enabled) {
+            // Is implicit the user can delete if he can add.
+            _this.addDeleteCommentsAvailable = enabled;
+        });
+        this.currentUserId = this.sitesProvider.getCurrentSiteUserId();
+        this.fetchComments(true);
+    };
+    /**
+     * Fetches the comments.
+     *
+     * @param  {boolean} sync         When to resync comments.
+     * @param  {boolean} [showErrors] When to display errors or not.
+     * @return {Promise<any>} Resolved when done.
+     */
+    CoreCommentsViewerPage.prototype.fetchComments = function (sync, showErrors) {
+        var _this = this;
+        this.loadMoreError = false;
+        var promise = sync ? this.syncComments(showErrors) : Promise.resolve();
+        return promise.catch(function () {
+            // Ignore errors.
+        }).then(function () {
+            return _this.offlineComments.getComment(_this.contextLevel, _this.instanceId, _this.componentName, _this.itemId, _this.area).then(function (offlineComment) {
+                _this.offlineComment = offlineComment;
+                if (offlineComment && !_this.currentUser) {
+                    return _this.userProvider.getProfile(_this.currentUserId, undefined, true).then(function (user) {
+                        _this.currentUser = user;
+                        _this.offlineComment.profileimageurl = user.profileimageurl;
+                        _this.offlineComment.fullname = user.fullname;
+                        _this.offlineComment.userid = user.id;
+                    }).catch(function () {
+                        // Ignore errors.
+                    });
+                }
+                else if (offlineComment) {
+                    _this.offlineComment.profileimageurl = _this.currentUser.profileimageurl;
+                    _this.offlineComment.fullname = _this.currentUser.fullname;
+                    _this.offlineComment.userid = _this.currentUser.id;
+                }
+                return _this.offlineComments.getDeletedComments(_this.contextLevel, _this.instanceId, _this.componentName, _this.itemId, _this.area);
+            });
+        }).then(function (deletedComments) {
+            _this.hasOffline = !!_this.offlineComment || deletedComments.length > 0;
+            // Get comments data.
+            return _this.commentsProvider.getComments(_this.contextLevel, _this.instanceId, _this.componentName, _this.itemId, _this.area, _this.page).then(function (response) {
+                _this.canAddComments = _this.addDeleteCommentsAvailable && response.canpost;
+                var comments = response.comments.sort(function (a, b) { return b.timecreated - a.timecreated; });
+                _this.canLoadMore = comments.length >= __WEBPACK_IMPORTED_MODULE_10__providers_comments__["a" /* CoreCommentsProvider */].pageSize;
+                return Promise.all(comments.map(function (comment) {
+                    // Get the user profile image.
+                    return _this.userProvider.getProfile(comment.userid, undefined, true).then(function (user) {
+                        comment.profileimageurl = user.profileimageurl;
+                        return comment;
+                    }).catch(function () {
+                        // Ignore errors.
+                        return comment;
+                    });
+                }));
+            }).then(function (comments) {
+                _this.comments = _this.comments.concat(comments);
+                deletedComments && deletedComments.forEach(function (deletedComment) {
+                    var comment = _this.comments.find(function (comment) {
+                        return comment.id == deletedComment.commentid;
+                    });
+                    if (comment) {
+                        comment.deleted = deletedComment.deleted;
+                    }
+                });
+                _this.canDeleteComments = _this.addDeleteCommentsAvailable && (_this.hasOffline || _this.comments.some(function (comment) {
+                    return !!comment.delete;
+                }));
+            });
+        }).catch(function (error) {
+            _this.loadMoreError = true; // Set to prevent infinite calls with infinite-loading.
+            if (error && _this.componentName == 'assignsubmission_comments') {
+                _this.domUtils.showAlertTranslated('core.notice', 'core.comments.commentsnotworking');
+            }
+            else {
+                _this.domUtils.showErrorModalDefault(error, _this.translate.instant('core.error') + ': get_comments');
+            }
+        }).finally(function () {
+            _this.commentsLoaded = true;
+            _this.refreshIcon = 'refresh';
+            _this.syncIcon = 'sync';
+        });
+    };
+    /**
+     * Function to load more commemts.
+     *
+     * @param {any} [infiniteComplete] Infinite scroll complete function. Only used from core-infinite-loading.
+     * @return {Promise<any>} Resolved when done.
+     */
+    CoreCommentsViewerPage.prototype.loadMore = function (infiniteComplete) {
+        this.page++;
+        this.canLoadMore = false;
+        return this.fetchComments(true).finally(function () {
+            infiniteComplete && infiniteComplete();
+        });
+    };
+    /**
+     * Refresh the comments.
+     *
+     * @param {boolean} showErrors Whether to display errors or not.
+     * @param {any} [refresher] Refresher.
+     * @return {Promise<any>} Resolved when done.
+     */
+    CoreCommentsViewerPage.prototype.refreshComments = function (showErrors, refresher) {
+        var _this = this;
+        this.refreshIcon = 'spinner';
+        this.syncIcon = 'spinner';
+        return this.commentsProvider.invalidateCommentsData(this.contextLevel, this.instanceId, this.componentName, this.itemId, this.area).finally(function () {
+            _this.page = 0;
+            _this.comments = [];
+            return _this.fetchComments(true, showErrors).finally(function () {
+                refresher && refresher.complete();
+            });
+        });
+    };
+    /**
+     * Show sync warnings if any.
+     *
+     * @param {string[]} warnings the warnings
+     */
+    CoreCommentsViewerPage.prototype.showSyncWarnings = function (warnings) {
+        var message = this.textUtils.buildMessage(warnings);
+        if (message) {
+            this.domUtils.showErrorModal(message);
+        }
+    };
+    /**
+     * Tries to synchronize comments.
+     *
+     * @param  {boolean} showErrors Whether to display errors or not.
+     * @return {Promise<any>}       Promise resolved if sync is successful, rejected otherwise.
+     */
+    CoreCommentsViewerPage.prototype.syncComments = function (showErrors) {
+        var _this = this;
+        return this.commentsSync.syncComments(this.contextLevel, this.instanceId, this.componentName, this.itemId, this.area).then(function (warnings) {
+            _this.showSyncWarnings(warnings);
+        }).catch(function (error) {
+            if (showErrors) {
+                _this.domUtils.showErrorModalDefault(error, 'core.errorsync', true);
+            }
+            return Promise.reject(null);
+        });
+    };
+    /**
+     * Add a new comment to the list.
+     *
+     * @param {Event} e Event.
+     */
+    CoreCommentsViewerPage.prototype.addComment = function (e) {
+        var _this = this;
+        e.preventDefault();
+        e.stopPropagation();
+        var params = {
+            contextLevel: this.contextLevel,
+            instanceId: this.instanceId,
+            componentName: this.componentName,
+            itemId: this.itemId,
+            area: this.area,
+            content: this.hasOffline ? this.offlineComment.content : ''
+        };
+        var modal = this.modalCtrl.create('CoreCommentsAddPage', params);
+        modal.onDidDismiss(function (data) {
+            if (data && data.comments) {
+                _this.comments = data.comments.concat(_this.comments);
+                _this.canDeleteComments = _this.addDeleteCommentsAvailable;
+            }
+            else if (data && !data.comments) {
+                _this.fetchComments(false);
+            }
+        });
+        modal.present();
+    };
+    /**
+     * Delete a comment.
+     *
+     * @param {Event} e     Click event.
+     * @param {any} comment Comment to delete.
+     */
+    CoreCommentsViewerPage.prototype.deleteComment = function (e, comment) {
+        var _this = this;
+        e.preventDefault();
+        e.stopPropagation();
+        var time = this.timeUtils.userDate((comment.lastmodified || comment.timecreated) * 1000, 'core.strftimerecentfull');
+        comment.contextlevel = this.contextLevel;
+        comment.instanceid = this.instanceId;
+        comment.component = this.componentName;
+        comment.itemid = this.itemId;
+        comment.area = this.area;
+        this.domUtils.showConfirm(this.translate.instant('core.comments.deletecommentbyon', { $a: { user: comment.fullname || '', time: time } })).then(function () {
+            _this.commentsProvider.deleteComment(comment).then(function () {
+                _this.showDelete = false;
+                _this.refreshComments(true);
+                _this.domUtils.showToast('core.comments.eventcommentdeleted', true, 3000);
+            }).catch(function (error) {
+                _this.domUtils.showErrorModalDefault(error, 'Delete comment failed.');
+            });
+        }).catch(function () {
+            // User cancelled, nothing to do.
+        });
+    };
+    /**
+     * Restore a comment.
+     *
+     * @param {Event} e Click event.
+     * @param {any} comment Comment to delete.
+     */
+    CoreCommentsViewerPage.prototype.undoDeleteComment = function (e, comment) {
+        var _this = this;
+        e.preventDefault();
+        e.stopPropagation();
+        this.offlineComments.undoDeleteComment(comment.id).then(function () {
+            comment.deleted = false;
+            _this.showDelete = false;
+        });
+    };
+    /**
+     * Toggle delete.
+     */
+    CoreCommentsViewerPage.prototype.toggleDelete = function () {
+        this.showDelete = !this.showDelete;
+    };
+    /**
+     * Page destroyed.
+     */
+    CoreCommentsViewerPage.prototype.ngOnDestroy = function () {
+        this.syncObserver && this.syncObserver.off();
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Content */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Content */])
+    ], CoreCommentsViewerPage.prototype, "content", void 0);
+    CoreCommentsViewerPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-core-comments-viewer',template:/*ion-inline-start:"D:\Final\app_int_ios\src\core\comments\pages\viewer\viewer.html"*/'<ion-header>\n\n    <ion-navbar core-back-button>\n\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n\n        <ion-buttons end>\n\n            <button *ngIf="canDeleteComments" item-end ion-button icon-only clear (click)="toggleDelete($event)" [attr.aria-label]="\'core.delete\' | translate">\n\n                <ion-icon name="create" ios="md-create"></ion-icon>\n\n            </button>\n\n            <core-context-menu>\n\n                <core-context-menu-item [hidden]="!(commentsLoaded && !hasOffline)" [priority]="100" [content]="\'core.refresh\' | translate" (action)="refreshComments(false)" [iconAction]="refreshIcon" [closeOnClick]="true"></core-context-menu-item>\n\n                <core-context-menu-item [hidden]="!(commentsLoaded && hasOffline)" [priority]="100" [content]="\'core.settings.synchronizenow\' | translate" (action)="refreshComments(true)" [iconAction]="syncIcon" [closeOnClick]="false"></core-context-menu-item>\n\n            </core-context-menu>\n\n        </ion-buttons>\n\n    </ion-navbar>\n\n</ion-header>\n\n<ion-content>\n\n    <ion-refresher [enabled]="commentsLoaded" (ionRefresh)="refreshComments(false, $event)">\n\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n\n    </ion-refresher>\n\n    <core-loading [hideUntil]="commentsLoaded">\n\n        <core-empty-box *ngIf="!comments || !comments.length" icon="chatbubbles" [message]="\'core.comments.nocomments\' | translate"></core-empty-box>\n\n\n\n        <div class="core-warning-card" icon-start *ngIf="hasOffline">\n\n            <ion-icon name="warning"></ion-icon>\n\n            {{ \'core.thereisdatatosync\' | translate:{$a: \'core.comments.comments\' | translate | lowercase } }}\n\n        </div>\n\n\n\n        <ion-card *ngIf="offlineComment" (click)="addComment($event)">\n\n            <ion-item text-wrap>\n\n                <ion-avatar core-user-avatar [user]="offlineComment" item-start></ion-avatar>\n\n                <h2>{{ offlineComment.fullname }}</h2>\n\n                <p>\n\n                    <ion-icon name="time"></ion-icon> {{ \'core.notsent\' | translate }}\n\n                </p>\n\n                <button *ngIf="showDelete" item-end ion-button icon-only clear [@coreSlideInOut]="\'fromRight\'" color="danger" (click)="deleteComment($event, offlineComment)" [attr.aria-label]="\'core.delete\' | translate">\n\n                    <ion-icon name="trash"></ion-icon>\n\n                </button>\n\n            </ion-item>\n\n            <ion-item text-wrap>\n\n                <core-format-text clean="true" [text]="offlineComment.content"></core-format-text>\n\n            </ion-item>\n\n        </ion-card>\n\n\n\n        <ion-card *ngFor="let comment of comments">\n\n            <ion-item text-wrap>\n\n                <ion-avatar core-user-avatar [user]="comment" item-start></ion-avatar>\n\n                <h2>{{ comment.fullname }}</h2>\n\n                <p *ngIf="!comment.deleted">{{ comment.timecreated * 1000 | coreFormatDate: \'strftimerecentfull\' }}</p>\n\n                <p *ngIf="comment.deleted">\n\n                    <ion-icon name="trash"></ion-icon> <span text-wrap>{{ \'core.deletedoffline\' | translate }}</span>\n\n                </p>\n\n                <button *ngIf="showDelete && !comment.deleted && comment.delete" item-end ion-button icon-only clear [@coreSlideInOut]="\'fromRight\'" color="danger" (click)="deleteComment($event, comment)" [attr.aria-label]="\'core.delete\' | translate">\n\n                    <ion-icon name="trash"></ion-icon>\n\n                </button>\n\n                <button *ngIf="showDelete && comment.deleted" item-end ion-button icon-only clear color="danger" (click)="undoDeleteComment($event, comment)" [attr.aria-label]="\'core.restore\' | translate">\n\n                    <ion-icon name="undo"></ion-icon>\n\n                </button>\n\n            </ion-item>\n\n            <ion-item text-wrap>\n\n                <core-format-text clean="true" [text]="comment.content"></core-format-text>\n\n            </ion-item>\n\n        </ion-card>\n\n\n\n        <core-infinite-loading [enabled]="canLoadMore" (action)="loadMore($event)" [error]="loadMoreError"></core-infinite-loading>\n\n    </core-loading>\n\n\n\n    <ion-fab core-fab bottom end *ngIf="canAddComments">\n\n        <button ion-fab (click)="addComment($event)" [attr.aria-label]="\'core.comments.addcomment\' | translate">\n\n            <ion-icon name="add"></ion-icon>\n\n        </button>\n\n    </ion-fab>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\Final\app_int_ios\src\core\comments\pages\viewer\viewer.html"*/,
+            animations: [__WEBPACK_IMPORTED_MODULE_3__classes_animations__["b" /* coreSlideInOut */]]
         }),
-        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], sites["a" /* CoreSitesProvider */]])
-    ], CoreGradesCourseSplitPage);
-    return CoreGradesCourseSplitPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_9__core_user_providers_user__["a" /* CoreUserProvider */],
+            __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* ModalController */],
+            __WEBPACK_IMPORTED_MODULE_10__providers_comments__["a" /* CoreCommentsProvider */], __WEBPACK_IMPORTED_MODULE_11__providers_offline__["a" /* CoreCommentsOfflineProvider */],
+            __WEBPACK_IMPORTED_MODULE_8__providers_events__["a" /* CoreEventsProvider */], __WEBPACK_IMPORTED_MODULE_12__providers_sync__["a" /* CoreCommentsSyncProvider */],
+            __WEBPACK_IMPORTED_MODULE_6__providers_utils_text__["a" /* CoreTextUtilsProvider */], __WEBPACK_IMPORTED_MODULE_7__providers_utils_time__["a" /* CoreTimeUtilsProvider */]])
+    ], CoreCommentsViewerPage);
+    return CoreCommentsViewerPage;
 }());
 
-//# sourceMappingURL=coursesplit.js.map
-// EXTERNAL MODULE: ./src/components/components.module.ts
-var components_module = __webpack_require__(29);
-
-// EXTERNAL MODULE: ./src/directives/directives.module.ts + 2 modules
-var directives_module = __webpack_require__(31);
-
-// EXTERNAL MODULE: ./src/core/grades/components/components.module.ts
-var components_components_module = __webpack_require__(722);
-
-// CONCATENATED MODULE: ./src/core/grades/pages/coursesplit/coursesplit.module.ts
-// (C) Copyright 2015 Martin Dougiamas
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-var coursesplit_module___decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-
-
-
-
-var coursesplit_module_CoreGradesCourseSplitPageModule = /** @class */ (function () {
-    function CoreGradesCourseSplitPageModule() {
-    }
-    CoreGradesCourseSplitPageModule = coursesplit_module___decorate([
-        Object(core["I" /* NgModule */])({
-            declarations: [
-                coursesplit_CoreGradesCourseSplitPage
-            ],
-            imports: [
-                components_components_module["a" /* CoreGradesComponentsModule */],
-                components_module["a" /* CoreComponentsModule */],
-                directives_module["a" /* CoreDirectivesModule */],
-                ionic_angular["l" /* IonicPageModule */].forChild(coursesplit_CoreGradesCourseSplitPage),
-                _ngx_translate_core["b" /* TranslateModule */].forChild()
-            ],
-        })
-    ], CoreGradesCourseSplitPageModule);
-    return CoreGradesCourseSplitPageModule;
-}());
-
-//# sourceMappingURL=coursesplit.module.js.map
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
-var action_sheet_component_ngfactory = __webpack_require__(1468);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
-var alert_component_ngfactory = __webpack_require__(1469);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
-var app_root_ngfactory = __webpack_require__(1470);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
-var loading_component_ngfactory = __webpack_require__(1471);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
-var modal_component_ngfactory = __webpack_require__(1472);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
-var picker_component_ngfactory = __webpack_require__(1473);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
-var popover_component_ngfactory = __webpack_require__(1474);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
-var select_popover_component_ngfactory = __webpack_require__(1475);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
-var toast_component_ngfactory = __webpack_require__(1476);
-
-// EXTERNAL MODULE: ./src/components/context-menu/context-menu-popover.ngfactory.js
-var context_menu_popover_ngfactory = __webpack_require__(1479);
-
-// EXTERNAL MODULE: ./src/components/course-picker-menu/course-picker-menu-popover.ngfactory.js
-var course_picker_menu_popover_ngfactory = __webpack_require__(1480);
-
-// EXTERNAL MODULE: ./src/components/recaptcha/recaptchamodal.ngfactory.js
-var recaptchamodal_ngfactory = __webpack_require__(1481);
-
-// EXTERNAL MODULE: ./src/components/bs-tooltip/bs-tooltip.ngfactory.js
-var bs_tooltip_ngfactory = __webpack_require__(1482);
-
-// EXTERNAL MODULE: ./src/core/grades/components/course/course.ngfactory.js
-var course_ngfactory = __webpack_require__(1517);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(468);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
-var config = __webpack_require__(7);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
-var view_controller = __webpack_require__(38);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
-var navbar_ngfactory = __webpack_require__(1477);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(221);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
-var app = __webpack_require__(34);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
-var nav_controller = __webpack_require__(19);
-
-// EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(711);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
-var platform = __webpack_require__(16);
-
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
-var translate_service = __webpack_require__(18);
-
-// EXTERNAL MODULE: ./src/providers/events.ts
-var events = __webpack_require__(11);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
-var toolbar_title_ngfactory = __webpack_require__(1478);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
-var toolbar_title = __webpack_require__(364);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
-var toolbar = __webpack_require__(267);
-
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
-var translate_pipe = __webpack_require__(28);
-
-// EXTERNAL MODULE: ./src/components/split-view/split-view.ngfactory.js
-var split_view_ngfactory = __webpack_require__(470);
-
-// EXTERNAL MODULE: ./src/components/split-view/split-view.ts
-var split_view = __webpack_require__(26);
-
-// EXTERNAL MODULE: ./src/core/fileuploader/providers/fileuploader.ts
-var fileuploader = __webpack_require__(68);
-
-// EXTERNAL MODULE: ./src/core/grades/components/course/course.ts
-var course = __webpack_require__(496);
-
-// EXTERNAL MODULE: ./src/core/grades/providers/grades.ts
-var grades = __webpack_require__(162);
-
-// EXTERNAL MODULE: ./src/providers/utils/dom.ts
-var dom = __webpack_require__(4);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(70);
-
-// EXTERNAL MODULE: ./src/core/grades/providers/helper.ts
-var helper = __webpack_require__(168);
-
-// EXTERNAL MODULE: ./src/providers/app.ts
-var providers_app = __webpack_require__(9);
-
-// CONCATENATED MODULE: ./src/core/grades/pages/coursesplit/coursesplit.ngfactory.js
-/**
- * @fileoverview This file was generated by the Angular template compiler. Do not edit.
- *
- * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
- * tslint:disable
- */ 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var styles_CoreGradesCourseSplitPage = [];
-var RenderType_CoreGradesCourseSplitPage = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_CoreGradesCourseSplitPage, data: {} });
-
-function View_CoreGradesCourseSplitPage_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 12, "ion-header", [], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, toolbar_header["a" /* Header */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, view_controller["a" /* ViewController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 8, "ion-navbar", [["class", "toolbar"], ["core-back-button", ""]], [[8, "hidden", 0], [2, "statusbar-padding", null]], null, null, navbar_ngfactory["b" /* View_Navbar_0 */], navbar_ngfactory["a" /* RenderType_Navbar */])), core["_30" /* ɵdid */](4, 49152, null, 0, navbar["a" /* Navbar */], [app["a" /* App */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), core["_30" /* ɵdid */](5, 212992, null, 0, back_button["a" /* CoreBackButtonDirective */], [navbar["a" /* Navbar */], platform["a" /* Platform */], translate_service["a" /* TranslateService */], events["a" /* CoreEventsProvider */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](7, 0, null, 3, 3, "ion-title", [], null, null, null, toolbar_title_ngfactory["b" /* View_ToolbarTitle_0 */], toolbar_title_ngfactory["a" /* RenderType_ToolbarTitle */])), core["_30" /* ɵdid */](8, 49152, null, 0, toolbar_title["a" /* ToolbarTitle */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), (_l()(), core["_55" /* ɵted */](9, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_31" /* ɵeld */](14, 0, null, null, 5, "core-split-view", [], null, null, null, split_view_ngfactory["b" /* View_CoreSplitViewComponent_0 */], split_view_ngfactory["a" /* RenderType_CoreSplitViewComponent */])), core["_30" /* ɵdid */](15, 245760, null, 0, split_view["a" /* CoreSplitViewComponent */], [[2, nav_controller["a" /* NavController */]], core["t" /* ElementRef */], fileuploader["a" /* CoreFileUploaderProvider */], platform["a" /* Platform */], translate_service["a" /* TranslateService */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_31" /* ɵeld */](17, 0, null, 0, 1, "core-grades-course", [["class", "core-avoid-header"]], null, null, null, course_ngfactory["c" /* View_CoreGradesCourseComponent_0 */], course_ngfactory["b" /* RenderType_CoreGradesCourseComponent */])), core["_30" /* ɵdid */](18, 114688, null, 0, course["a" /* CoreGradesCourseComponent */], [grades["a" /* CoreGradesProvider */], dom["a" /* CoreDomUtilsProvider */], nav_params["a" /* NavParams */], helper["a" /* CoreGradesHelperProvider */], [2, nav_controller["a" /* NavController */]], providers_app["a" /* CoreAppProvider */], [2, split_view["a" /* CoreSplitViewComponent */]]], { courseId: [0, "courseId"], userId: [1, "userId"], gradeId: [2, "gradeId"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n\n\n"]))], function (_ck, _v) { var _co = _v.component; _ck(_v, 5, 0); _ck(_v, 15, 0); var currVal_3 = _co.courseId; var currVal_4 = _co.userId; var currVal_5 = _co.gradeId; _ck(_v, 18, 0, currVal_3, currVal_4, currVal_5); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 4)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 4)._sbPadding; _ck(_v, 3, 0, currVal_0, currVal_1); var currVal_2 = core["_56" /* ɵunv */](_v, 9, 0, core["_44" /* ɵnov */](_v, 10).transform("core.grades.grades")); _ck(_v, 9, 0, currVal_2); }); }
-function View_CoreGradesCourseSplitPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-core-grades-course-split", [], null, null, null, View_CoreGradesCourseSplitPage_0, RenderType_CoreGradesCourseSplitPage)), core["_30" /* ɵdid */](1, 49152, null, 0, coursesplit_CoreGradesCourseSplitPage, [nav_params["a" /* NavParams */], sites["a" /* CoreSitesProvider */]], null, null)], null, null); }
-var CoreGradesCourseSplitPageNgFactory = core["_27" /* ɵccf */]("page-core-grades-course-split", coursesplit_CoreGradesCourseSplitPage, View_CoreGradesCourseSplitPage_Host_0, {}, {}, []);
-
-//# sourceMappingURL=coursesplit.ngfactory.js.map
-// EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
-var common = __webpack_require__(8);
-
-// EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
-var esm5_forms = __webpack_require__(22);
-
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
-var translate_loader = __webpack_require__(360);
-
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
-var translate_compiler = __webpack_require__(361);
-
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
-var translate_parser = __webpack_require__(363);
-
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
-var missing_translation_handler = __webpack_require__(362);
-
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(467);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(710);
-
-// EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 2 modules
-var pipes_module = __webpack_require__(109);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
-var module_loader = __webpack_require__(268);
-
-// CONCATENATED MODULE: ./src/core/grades/pages/coursesplit/coursesplit.module.ngfactory.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreGradesCourseSplitPageModuleNgFactory", function() { return CoreGradesCourseSplitPageModuleNgFactory; });
-/**
- * @fileoverview This file was generated by the Angular template compiler. Do not edit.
- *
- * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
- * tslint:disable
- */ 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var CoreGradesCourseSplitPageModuleNgFactory = core["_28" /* ɵcmf */](coursesplit_module_CoreGradesCourseSplitPageModule, [], function (_l) { return core["_40" /* ɵmod */]([core["_41" /* ɵmpd */](512, core["o" /* ComponentFactoryResolver */], core["_21" /* ɵCodegenComponentFactoryResolver */], [[8, [action_sheet_component_ngfactory["a" /* ActionSheetCmpNgFactory */], alert_component_ngfactory["a" /* AlertCmpNgFactory */], app_root_ngfactory["a" /* IonicAppNgFactory */], loading_component_ngfactory["a" /* LoadingCmpNgFactory */], modal_component_ngfactory["a" /* ModalCmpNgFactory */], picker_component_ngfactory["a" /* PickerCmpNgFactory */], popover_component_ngfactory["a" /* PopoverCmpNgFactory */], select_popover_component_ngfactory["a" /* SelectPopoverNgFactory */], toast_component_ngfactory["a" /* ToastCmpNgFactory */], context_menu_popover_ngfactory["a" /* CoreContextMenuPopoverComponentNgFactory */], course_picker_menu_popover_ngfactory["a" /* CoreCoursePickerMenuPopoverComponentNgFactory */], recaptchamodal_ngfactory["a" /* CoreRecaptchaModalComponentNgFactory */], bs_tooltip_ngfactory["a" /* CoreBSTooltipComponentNgFactory */], course_ngfactory["a" /* CoreGradesCourseComponentNgFactory */], CoreGradesCourseSplitPageNgFactory]], [3, core["o" /* ComponentFactoryResolver */]], core["K" /* NgModuleRef */]]), core["_41" /* ɵmpd */](4608, common["m" /* NgLocalization */], common["l" /* NgLocaleLocalization */], [core["G" /* LOCALE_ID */], [2, common["w" /* ɵa */]]]), core["_41" /* ɵmpd */](4608, esm5_forms["x" /* ɵi */], esm5_forms["x" /* ɵi */], []), core["_41" /* ɵmpd */](4608, esm5_forms["d" /* FormBuilder */], esm5_forms["d" /* FormBuilder */], []), core["_41" /* ɵmpd */](4608, translate_loader["b" /* TranslateLoader */], translate_loader["a" /* TranslateFakeLoader */], []), core["_41" /* ɵmpd */](4608, translate_compiler["a" /* TranslateCompiler */], translate_compiler["b" /* TranslateFakeCompiler */], []), core["_41" /* ɵmpd */](4608, translate_parser["b" /* TranslateParser */], translate_parser["a" /* TranslateDefaultParser */], []), core["_41" /* ɵmpd */](4608, missing_translation_handler["b" /* MissingTranslationHandler */], missing_translation_handler["a" /* FakeMissingTranslationHandler */], []), core["_41" /* ɵmpd */](4608, translate_service["a" /* TranslateService */], translate_service["a" /* TranslateService */], [translate_store["a" /* TranslateStore */], translate_loader["b" /* TranslateLoader */], translate_compiler["a" /* TranslateCompiler */], translate_parser["b" /* TranslateParser */], missing_translation_handler["b" /* MissingTranslationHandler */], translate_service["b" /* USE_DEFAULT_LANG */], translate_service["c" /* USE_STORE */]]), core["_41" /* ɵmpd */](512, common["b" /* CommonModule */], common["b" /* CommonModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["v" /* ɵba */], esm5_forms["v" /* ɵba */], []), core["_41" /* ɵmpd */](512, esm5_forms["i" /* FormsModule */], esm5_forms["i" /* FormsModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["s" /* ReactiveFormsModule */], esm5_forms["s" /* ReactiveFormsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["a" /* IonicModule */], ionic_angular_module["a" /* IonicModule */], []), core["_41" /* ɵmpd */](512, _ngx_translate_core["b" /* TranslateModule */], _ngx_translate_core["b" /* TranslateModule */], []), core["_41" /* ɵmpd */](512, directives_module["a" /* CoreDirectivesModule */], directives_module["a" /* CoreDirectivesModule */], []), core["_41" /* ɵmpd */](512, pipes_module["a" /* CorePipesModule */], pipes_module["a" /* CorePipesModule */], []), core["_41" /* ɵmpd */](512, components_module["a" /* CoreComponentsModule */], components_module["a" /* CoreComponentsModule */], []), core["_41" /* ɵmpd */](512, components_components_module["a" /* CoreGradesComponentsModule */], components_components_module["a" /* CoreGradesComponentsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["b" /* IonicPageModule */], ionic_angular_module["b" /* IonicPageModule */], []), core["_41" /* ɵmpd */](512, coursesplit_module_CoreGradesCourseSplitPageModule, coursesplit_module_CoreGradesCourseSplitPageModule, []), core["_41" /* ɵmpd */](256, translate_service["c" /* USE_STORE */], undefined, []), core["_41" /* ɵmpd */](256, translate_service["b" /* USE_DEFAULT_LANG */], undefined, []), core["_41" /* ɵmpd */](256, module_loader["a" /* LAZY_LOADED_TOKEN */], coursesplit_CoreGradesCourseSplitPage, [])]); });
-
-//# sourceMappingURL=coursesplit.module.ngfactory.js.map
+//# sourceMappingURL=viewer.js.map
 
 /***/ })
 
