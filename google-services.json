@@ -22,9 +22,6 @@
       "api_key": [
         {
           "current_key": "AIzaSyD3Ow7G0_ZL-crXvvWDdvoacrihq6ReYi8"
-        },
-		{
-          "current_key": "AIzaSyDBtwl7aAHsaST6Ya6RetFDKZIr0dZyaiQ"
         }
       ],
       "services": {
@@ -33,6 +30,13 @@
             {
               "client_id": "1041111699569-0p6f7r7mn57trurdqrm1du4dk8kro9aj.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "1041111699569-fnci2ok1iq3lst61ucpom700hnabh9gf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.magfalms.magfaapp"
+              }
             }
           ]
         }
