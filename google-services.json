@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "257739236534-ak2dool50m6qvt191rcjanqbn9k44pah.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.magfalms.magfaapp",
+            "certificate_hash": "c696fadc003488f356ec90a7e1cd5e695c2fa154"
+          }
+        },
+        {
           "client_id": "257739236534-fupejgud2m5pojad5veoeceepgs76nd9.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -22,24 +30,23 @@
       "api_key": [
         {
           "current_key": "AIzaSyDthhkw5_xm6iRgAbPQ2BanB0g1b5pkLnM"
-        },
-		{
-          "current_key": "AIzaSyCv_qjCskeL-PEagm5LzvAWP1OkSWnRzeA"
-        },
-		{
-          "current_key": "AAAAPAJ0pLY:APA91bG3uBB9iBBpHz7CSToRTGwH-Qa_BccI4ZD8XOxxTi-UK9lJVphu-P_PY-zkzgREzSDyzxPNoMH_CbhqIRLbMWQQ28Mk-mgRAYkGgrNtoRxZgY2uRJDXXrc165PNKHeQgYtFHjTx"
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
+          "other_platform_oauth_client": [
+            {
+              "client_id": "257739236534-fupejgud2m5pojad5veoeceepgs76nd9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "257739236534-g757t0v9ei0cu5krkf2gh0ij140v0c30.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.magfalms.magfaapp"
+              }
+            }
+          ]
         }
       }
     }
