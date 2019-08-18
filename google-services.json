@@ -36,20 +36,12 @@
         }
       ],
       "services": {
+        "analytics_service": {
+          "status": 1
+        },
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "257739236534-fupejgud2m5pojad5veoeceepgs76nd9.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "257739236534-g757t0v9ei0cu5krkf2gh0ij140v0c30.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.magfalms.magfaapp"
-              }
-            }
-          ]
+          "status": 1,
+          "other_platform_oauth_client": []
         }
       }
     }
