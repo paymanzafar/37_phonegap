@@ -15,14 +15,6 @@
       },
       "oauth_client": [
         {
-          "client_id": "257739236534-4tmjpl182c9sfrjblh1dl5ge1kv6sfb8.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.magfalms.magfaapp",
-            "certificate_hash": "c696fadc003488f356ec90a7e1cd5e695c2fa154"
-          }
-        },
-        {
           "client_id": "257739236534-fupejgud2m5pojad5veoeceepgs76nd9.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -32,7 +24,7 @@
           "current_key": "AIzaSyDthhkw5_xm6iRgAbPQ2BanB0g1b5pkLnM"
         },
 		{
-          "current_key": "AIzaSyCv_qjCskeL-PEagm5LzvAWP1OkSWnRzeA"
+          "current_key": "AIzaSyCgz0VQRHlLkfXq297RgA6KQsM0Lz_6tC4"
         }
       ],
       "services": {
@@ -42,6 +34,9 @@
         "appinvite_service": {
           "status": 1,
           "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
         }
       }
     }
