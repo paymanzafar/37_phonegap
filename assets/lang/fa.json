@@ -1621,7 +1621,7 @@
 	"core.tag.notagsfound": "هیچ برچسبی مطابق \"{{$a}}\" یافت نشد.",
 	"core.tag.searchtags": "جستجوی برچسب ها",
     "core.tag.tag": "برچسب",
-    "core.tag.tags": "tag ها",
+    "core.tag.tags": "برچسب ها",
     "core.teachers": "اساتید",
     "core.thereisdatatosync": "تعدادی {{$a}} آفلاین وجود دارند که باید همسان‌سازی شوند.",
     "core.thisdirection": "rtl",
